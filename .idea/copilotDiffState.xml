@@ -56,6 +56,15 @@
             </PendingDiffInfo>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/resources/features/Registration.feature">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/resources/features/Registration.feature" />
+              <option name="originalContent" value="Feature: Sign Up and Login  on Ndosi Automation&#10;&#10;&#10;  Scenario: Navigate to Learning Materials, Sign Up, and Login&#10;    Given I am on the Ndosi Automation homepage&#10;    When I click on the &quot;Learning Materials&quot; tab&#10;    And I click on the &quot;Sign Up&quot; button&#10;    And I fill in the registration form with valid details&#10;      | Field           | Value            |&#10;      | FirstName       | Tata             |&#10;      | LastName        | Mk            |&#10;      | Email           | TMK@example.com |&#10;      | Password        | Pass1234         |&#10;      | ConfirmPassword | Pass1234         |&#10;    And I submit the registration form&#10;    Then I should see a confirmation message &quot;Registration successful! Please login with your credentials.&quot;&#10;    When I enter my password to log in&#10;    And I submit the login form&#10;    Then I should be logged in and see the page title &quot;Practice Assessments&quot;&#10;" />
+              <option name="updatedContent" value="Feature: Sign Up and Login on Ndosi Automation&#10;&#10;  Scenario Outline: Navigate to Learning Materials, Sign Up, and Login&#10;    Given I am on the Ndosi Automation homepage&#10;    When I click on the &quot;Learning Materials&quot; tab&#10;    And I click on the &quot;Sign Up&quot; button&#10;    And I fill in the registration form with valid details&#10;      | Field           | Value            |&#10;      | FirstName       | &lt;FirstName&gt;      |&#10;      | LastName        | &lt;LastName&gt;       |&#10;      | Email           | &lt;Email&gt;          |&#10;      | Password        | &lt;Password&gt;       |&#10;      | ConfirmPassword | &lt;ConfirmPassword&gt; |&#10;    And I submit the registration form&#10;    Then I should see a confirmation message &quot;Registration successful! Please login with your credentials.&quot;&#10;    When I enter my password to log in&#10;    And I submit the login form&#10;    Then I should be logged in and see the page title &quot;Practice Assessments&quot;&#10;&#10;  Examples:&#10;    | FirstName | LastName | Email            | Password | ConfirmPassword |&#10;    | Tata      | Mk       | TMK@example.com  | Pass1234 | Pass1234        |&#10;    | John      | Doe      | john.doe@test.com| Test1234 | Test1234        |" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
