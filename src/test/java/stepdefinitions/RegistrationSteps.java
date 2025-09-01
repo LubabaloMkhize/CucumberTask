@@ -120,6 +120,6 @@ public class RegistrationSteps {
 
         Allure.addAttachment("Page Title Visible", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
-        driver.quit(); // Uncomment if appropriate
+        driver.quit();
     }
 }
