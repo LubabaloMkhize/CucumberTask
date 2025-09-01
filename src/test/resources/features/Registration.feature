@@ -17,3 +17,4 @@ Feature: Sign Up and Login  on Ndosi Automation
     When I enter my password to log in
     And I submit the login form
     Then I should be logged in and see the page title "Practice Assessments"
+
