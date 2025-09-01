@@ -108,13 +108,18 @@ public class RegistrationSteps {
 
     }
 
-    @Then("I should be logged in and see the logout button")
-    public void i_should_be_logged_in_and_see_the_logout_button() {
+    @Then("I should be logged in and see the page title \"Practice Assessments\"")
+    public void i_should_be_logged_in_and_see_the_page_title() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        //boolean isLogoutButtonPresent =
-        driver.findElement(By.xpath("//button[normalize-space(text())='Logout']")).isDisplayed();
-        //Assert.assertTrue(isLogoutButtonPresent, "Logout button is not displayed, login might have failed.");
-        Allure.addAttachment("Logout Button Visible", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-        driver.quit();
+
+        WebElement pageTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//h2[normalize-space(text())='Practice Assessments']")
+        ));
+
+        Assert.assertTrue(pageTitle.isDisplayed(), "Page title 'Practice Assessments' is not visible");
+
+        Allure.addAttachment("Page Title Visible", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+
+        driver.quit(); // Uncomment if appropriate
     }
 }
